@@ -32,7 +32,7 @@ jobs:
       run: |
         ./run_python_examples.sh "install_deps,run_all,clean"
     - name: Open issue on failure
-      if: ${{ failure() && github.event_name  == 'schedule' }}
+      if: ${{ failure() && github.event_name == 'schedule' }}
       uses: rishabhgupta/git-action-issue@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
